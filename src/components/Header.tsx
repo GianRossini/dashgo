@@ -43,7 +43,7 @@ export function Header() {
           variant="unstyled"
           px="4"
           mr="4"
-          placeholder="Buscar na plataforma"
+          placeholder="Search"
           _placeholder={{ color: 'gray.400' }}
         />
 
@@ -68,11 +68,11 @@ export function Header() {
           <Box mr="4" textAlign="right">
             <Text>User Name</Text>
             <Text color="gray.300" fontSize="small">
-              email.example@gmail.com
+              user@email.com
             </Text>
           </Box>
 
-          <Avatar size="md" name="User Name" src="https://github.com/diego3g.png" />
+          <Avatar size="md" name="User Name" />
         </Flex>
       </Flex>
     </Flex>
