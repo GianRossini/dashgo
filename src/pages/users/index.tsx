@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
+import { Pagination } from '../../components/Pagination';
 
 import {
   Box,
@@ -87,7 +88,7 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">user@email.com</Text>
                   </Box>
                 </Td>
-                <Td>4th of April, 2021</Td>
+                <Td>5th of April, 2021</Td>
                 <Td>
                   <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
                     Edit
@@ -105,7 +106,7 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">user@email.com</Text>
                   </Box>
                 </Td>
-                <Td>4th of April, 2021</Td>
+                <Td>6th of April, 2021</Td>
                 <Td>
                   <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
                     Edit
@@ -114,6 +115,8 @@ export default function UserList() {
               </Tr>
             </Tbody>
           </Table>
+
+          <Pagination />
         </Box>
       </Flex>
     </Box>
