@@ -9,13 +9,13 @@ export function SidebarNav() {
   return(
     <Stack spacing="12" align="flex-start">
       <NavSection title="GENERAL">
-        <NavLink nextLinkProps={{ href: '/' }} icon={RiDashboardLine}>Dashboard</NavLink>
-        <NavLink nextLinkProps={{ href: '/' }} icon={RiContactsLine}>Users</NavLink>
+        <NavLink nextLinkProps={{ href: '/dashboard' }} icon={RiDashboardLine}>Dashboard</NavLink>
+        <NavLink nextLinkProps={{ href: '/users' }} icon={RiContactsLine}>Users</NavLink>
       </NavSection>
 
       <NavSection title="AUTOMATION">
-        <NavLink nextLinkProps={{ href: '/' }} icon={RiInputMethodLine}>Forms</NavLink>
-        <NavLink nextLinkProps={{ href: '/' }} icon={RiGitMergeLine}>Automation</NavLink>
+        <NavLink nextLinkProps={{ href: '/forms' }} icon={RiInputMethodLine}>Forms</NavLink>
+        <NavLink nextLinkProps={{ href: '/automation' }} icon={RiGitMergeLine}>Automation</NavLink>
       </NavSection>
     </Stack>
   );
