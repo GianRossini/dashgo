@@ -18,12 +18,18 @@ import {
   Tr,
   Th,
   Td,
-  Checkbox
+  Checkbox,
+  useBreakpointValue
 } from '@chakra-ui/react';
 
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 
 export default function UserList() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
+
   return(
     <Box>
       <Header />
@@ -51,17 +57,17 @@ export default function UserList() {
           <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
-                <Th w="8" px="6" color="gray.300">
+                <Th w="8" px={["4", "4", "6"]} color="gray.300">
                   <Checkbox colorScheme="pink"/>
                 </Th>
                 <Th>User</Th>
-                <Th>Register date</Th>
+                {isWideVersion && <Th>Register date</Th>}
                 <Th w="8"></Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td px="6">
+                <Td px={["4", "4", "6"]}>
                   <Checkbox colorScheme="pink"/>
                 </Td>
                 <Td>
@@ -70,16 +76,20 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">user@email.com</Text>
                   </Box>
                 </Td>
-                <Td>4th of April, 2021</Td>
-                <Td>
-                  <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
-                    Edit
-                  </Button>
-                </Td>
+                {isWideVersion && (
+                  <>
+                    <Td>5th of April, 2021</Td>
+                    <Td>
+                      <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
+                        Edit
+                      </Button>
+                    </Td>
+                  </>
+                )}
               </Tr>
               
               <Tr>
-                <Td px="6">
+                <Td px={["4", "4", "6"]}>
                   <Checkbox colorScheme="pink"/>
                 </Td>
                 <Td>
@@ -88,16 +98,20 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">user@email.com</Text>
                   </Box>
                 </Td>
-                <Td>5th of April, 2021</Td>
-                <Td>
-                  <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
-                    Edit
-                  </Button>
-                </Td>
+                {isWideVersion && (
+                  <>
+                    <Td>5th of April, 2021</Td>
+                    <Td>
+                      <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
+                        Edit
+                      </Button>
+                    </Td>
+                  </>
+                )}
               </Tr>
 
               <Tr>
-                <Td px="6">
+                <Td px={["4", "4", "6"]}>
                   <Checkbox colorScheme="pink"/>
                 </Td>
                 <Td>
@@ -106,12 +120,16 @@ export default function UserList() {
                     <Text fontSize="sm" color="gray.300">user@email.com</Text>
                   </Box>
                 </Td>
-                <Td>6th of April, 2021</Td>
-                <Td>
-                  <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
-                    Edit
-                  </Button>
-                </Td>
+                {isWideVersion && (
+                  <>
+                    <Td>5th of April, 2021</Td>
+                    <Td>
+                      <Button as="a" size="xs" fontSize="xs" colorScheme="pink" leftIcon={<Icon as={RiPencilLine} />} variant="outline">
+                        Edit
+                      </Button>
+                    </Td>
+                  </>
+                )}
               </Tr>
             </Tbody>
           </Table>
