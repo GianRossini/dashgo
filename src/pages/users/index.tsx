@@ -42,7 +42,7 @@ export default function UserList() {
     lg: true,
   });
 
-  async function handlePrefetchUser(userId: number) {
+  async function handlePrefetchUser(userId: string) {
     await queryClient.prefetchQuery(['user', userId], async () => {
       const response = await api.get(`users/${userId}`);
 
@@ -109,8 +109,8 @@ export default function UserList() {
                       </Td>
                       <Td>
                         <Box>
-                          <NextLink href={`/users/${user.id}`}>
-                            <Link color="purple.500" onMouseEnter={() => handlePrefetchUser(Number(user.id))}>
+                          <NextLink href={`/users/${user.id}`} passHref>
+                            <Link color="purple.500" onMouseEnter={() => handlePrefetchUser(user.id)}>
                               <Text fontWeight="bold">{user.name}</Text>
                             </Link>
                           </NextLink>
